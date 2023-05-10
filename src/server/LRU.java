@@ -1,23 +1,28 @@
 package server;
 
 
-import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Set;
 
+//Least Recently Used
 public class LRU implements CacheReplacementPolicy {
-    HashSet<String> cache=new HashSet<>();
+    LinkedHashSet<String> cache = new LinkedHashSet<>();
+    
     @Override
     public void add(String word) {
-        if(cache.contains(word))
-            cache.remove(word);
-        else cache.add(word);
+        cache.remove(word); //if the word is already in the cache, remove it
+        cache.add(word); //then add it to the end of the cache
     }
 
+    //remove the first element in the cache because it is the Least Recently Used
     @Override
     public String remove() {
-        String[] strings=new String[cache.size()];
-        strings=cache.toArray(strings);
-        return strings[0];
+        Iterator<String> iterator = cache.iterator(); //pointing to the first element
+        String temp = iterator.next(); //returning the current element and then move to next element
+        cache.remove(iterator.next()); //removing the first element
+
+        return temp;
     }
 }
