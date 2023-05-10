@@ -15,6 +15,7 @@ public class DictionaryManager {
             dm=new DictionaryManager();
         return dm;
     }
+    //Given list of books, the last string is the query for searching
     public boolean query(String...books){
         String last=books[books.length-1];
         boolean flag=false;

@@ -9,7 +9,8 @@ import java.net.SocketTimeoutException;
 public class MyServer {
     int port;
     boolean stop;
-    ClientHandler ch;
+    //can be injected as BookScrabbleHandler!
+    ClientHandler ch; //recieves input from client and output to client
 
     public MyServer(int port, ClientHandler ch){
         this.port=port;
@@ -28,6 +29,7 @@ public class MyServer {
             while(!stop){
                 try{
                     client=server.accept();
+                    //BookScrabbleHandler
                     ch.handleClient(client.getInputStream(), client.getOutputStream());
                     ch.close();
                     client.close();}

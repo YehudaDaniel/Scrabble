@@ -29,6 +29,9 @@ public class Dictionary {
             }scanner.close();
         }
     }
+
+    //given a word, checks in the existing words, then in the non existing words
+    //then in the bloomFilter
     public boolean query(String word){
         if(cacheLRU.query(word))
             return true;
@@ -45,6 +48,8 @@ public class Dictionary {
             }
         }
     }
+
+    //given a word, using the IOSearcher search the word and add it to the cache
     public boolean challenge(String word){
         try {
             if (IOSearcher.search(word,filenames)){
