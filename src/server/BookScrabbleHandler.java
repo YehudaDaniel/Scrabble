@@ -4,6 +4,11 @@ import java.util.Scanner;
 public class BookScrabbleHandler implements ClientHandler{
     PrintWriter out;
     Scanner in;
+
+    //Read string from the client until \n, 
+    //if the string starts with "Q" it will use query method,
+    //if the string starts with "C" it will use challenge method
+    //the rest of the string are books seperated by ",", and the last string is the query
     @Override
     public void handleClient(InputStream inFromclient, OutputStream outToClient) {
         Boolean answer = null;
@@ -16,8 +21,10 @@ public class BookScrabbleHandler implements ClientHandler{
                 answer = DictionaryManager.get().query(books);
             }
             else if((line.startsWith("C")) ) {
-                answer = DictionaryManager.get().query(books);
+                answer = DictionaryManager.get().challenge(books);
             }
+            in.close();
+            out.close();
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
@@ -25,12 +32,5 @@ public class BookScrabbleHandler implements ClientHandler{
         }
 
     }
-    public void close(){
-        try {
-            in.close();
-            out.close();
-        }catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+    public void close(){}
 }
