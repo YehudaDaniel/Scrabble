@@ -14,7 +14,7 @@ In this semester (Second semester) the students will work in group of 4's in ord
 the server side of the game.
 
 ## Collaborators
-[Chen Shalev]([https://github.com/username/repository](https://github.com/ShalevChen))
-[Yuval Hajbi]([https://github.com/username/repository](https://github.com/YuvalHajbi))
-[Yehuda Daniel]([https://github.com/username/repository](https://github.com/YehudaDaniel))
-[Ilan Brilovitch]([https://github.com/username/repository](https://github.com/jagashot))
+[Chen Shalev](https://github.com/ShalevChen)
+[Yuval Hajbi](https://github.com/YuvalHajbi)
+[Yehuda Daniel](https://github.com/YehudaDaniel)
+[Ilan Brilovitch](https://github.com/jagashot)
