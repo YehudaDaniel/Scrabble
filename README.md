@@ -21,3 +21,11 @@ the server side of the game.
 [Yehuda Daniel](https://github.com/YehudaDaniel)
 
 [Ilan Brilovitch](https://github.com/jagashot)
+
+
+
+## Gantt
+![Gantt_Chart (2)](https://github.com/YehudaDaniel/Scrabble/assets/130361134/cb8cda24-6499-42b5-bbaf-6c9b0cde5921)
+
+
+
