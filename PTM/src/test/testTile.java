@@ -1,5 +1,7 @@
 package test;
 
+import server.Tile;
+
 public class testTile {
     public static void main(String[] args) {
         // Create an instance of the Tile.Bag

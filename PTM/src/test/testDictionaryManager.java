@@ -1,5 +1,7 @@
 package test;
 
+import server.DictionaryManager;
+
 public class testDictionaryManager {
     public static void main(String[] args) {
         // Create an instance of the DictionaryManager

@@ -1,5 +1,8 @@
 package test;
 
+import server.Tile;
+import server.Word;
+
 import java.util.Arrays;
 
 public class testWord {

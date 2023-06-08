@@ -1,5 +1,7 @@
 package test;
 
+import server.Dictionary;
+
 public class testDictionary {
     public static void main(String[] args) {
         // Create a Dictionary with two files: "english.txt" and "words.txt"

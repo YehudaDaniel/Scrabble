@@ -1,5 +1,7 @@
 package test;
 
+import server.BloomFilter;
+
 public class testBloomFilter {
     public static void main(String[] args) {
         // Create a BloomFilter with size 100 and hash functions MD5 and SHA-1

@@ -1,5 +1,6 @@
 package test;
 
+import server.ClientHandler;
 import server.MainTrain;
 
 import java.io.ByteArrayInputStream;
