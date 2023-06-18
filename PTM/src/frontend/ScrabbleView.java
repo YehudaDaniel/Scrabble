@@ -98,10 +98,27 @@ public class ScrabbleView {
 
     public void addTileToBoard(int row, int col, String tile) {
         // TODO: Implement adding a tile to the game board
+        JLabel tileLabel = new JLabel(tile);
+        tileLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        tileLabel.setOpaque(true);
+        tileLabel.setBackground(Color.WHITE);
+        tileLabel.setPreferredSize(new Dimension(40, 40));
+        tileLabel.setHorizontalAlignment(JLabel.CENTER);
+        tileLabel.setVerticalAlignment(JLabel.CENTER);
+        boardPanel.add(tileLabel, row * 15 + col);
+        boardPanel.revalidate();
+        boardPanel.repaint();
     }
 
     public void removeTileFromBoard(int row, int col) {
         // TODO: Implement removing a tile from the game board
+        Component[] components = boardPanel.getComponents();
+        int index = row * 15 + col;
+        if (index >= 0 && index < components.length) {
+            boardPanel.remove(index);
+            boardPanel.revalidate();
+            boardPanel.repaint();
+        }
     }
 
     public void updateRack(String[] tiles) {
