@@ -10,13 +10,14 @@ import java.util.Observable;
 import java.util.Scanner;
 
 import server.Board;
+import server.ClientHandler;
 import server.Word;
 import server.MyServer;
 import server.Tile;
 
 
 public class Host extends Observable implements Player {
-
+   
     public int ourOfClients = 0;
     public Socket myhostSocket;
     public int ourserverPort;
@@ -50,6 +51,11 @@ public class Host extends Observable implements Player {
         this.myClientServer = new MyServer(hostPort, new HostClientHandler());
         this.myClientServer.start();
       
+    }
+    threadPool server;
+    public void startConnection(int port, ClientHandler ch){
+        server = new threadPool(port, ch);
+        server.start();
     }
 
     public static Host getHost(InetAddress ip, int serverPort, int hostPort, int rounds)
