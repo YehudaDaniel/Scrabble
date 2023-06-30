@@ -26,3 +26,6 @@ the server side of the game.
 ## Gantt
 ![Gantt_Chart (1)](https://github.com/YehudaDaniel/Scrabble/assets/130361134/bb620845-ec3e-4e5a-baf5-d7526c047934)
 
+
+## YouTube video 
+[YouTube Video](https://youtu.be/7P8iFHjF7SM)
